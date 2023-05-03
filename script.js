@@ -1,13 +1,19 @@
 class Produto {
-   constructor (nome, datadecadastro, inscricao, preco){
+   constructor (nome, datadecadastro, descricao, preco){
    this.nome = nome;
-   this.datadecadastro = datadevadastro;
+   this.datadecadastro = datadecadastro;
    this.descriçao = descricao;
    this.preco = preco;
    }
    
    mostrardados(){
-   return this.nome + this.datadecadastro + this.descriçao + this.preco;
+    return `
+     <div${this.nome}></div>
+     <div${this.datadecadastro}></div>
+     <div${this.descricao}></div>
+     <div${this.preco}></div>
+    `;
+
   }
   
 }
@@ -18,6 +24,32 @@ class Produto {
    }
 
    mostrarProdutoemDestaque(){
-   return this.nome + this.datadecadastro + this.descricao + this.preco + this.produtoDestaque ;
+    return `
+    <div${this.nome}></div>
+    <div${this.datadecadastro}></div>
+    <div${this.descricao}></div>
+    <div${this.preco}></div>
+   `;
+   ///return this.nome + this.datadecadastro + this.descricao + this.preco + this.produtoDestaque ;
    }
 }
+
+const produto = new Produto("laptop", "03/05/2023", "001", "5000"); 
+console.log(produto.mostrardados_())
+
+const div = document.getElementById("ProdutoemDestaque")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
